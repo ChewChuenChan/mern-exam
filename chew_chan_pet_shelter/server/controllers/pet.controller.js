@@ -13,7 +13,7 @@ module.exports ={
 
     //function to get all pets
     getAllPets:(req,res) =>{
-        Pet.find({})
+        Pet.find({}).sort({"petName":"asc"})
         .then((allPets)=>{
             console.log(allPets);
             res.json(allPets);
